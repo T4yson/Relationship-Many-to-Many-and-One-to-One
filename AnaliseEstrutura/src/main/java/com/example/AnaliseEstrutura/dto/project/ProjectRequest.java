@@ -1,6 +1,6 @@
 package com.example.AnaliseEstrutura.dto.project;
 
-public record SeatRequest (
+public record ProjectRequest(
         String name
 ){
 }

@@ -20,12 +20,11 @@ public class Seat {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String codigo;
+    private String cod;
 
     @OneToOne(mappedBy = "assento")
-    private Employee funcionario;
-
-    public Seat(String codigo) {
-        this.codigo = codigo;
+    private Employee employee;
+    public Seat(String cod) {
+        this.cod = cod;
     }
 }

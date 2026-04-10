@@ -26,15 +26,15 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nome;
+    private String name;
 
     @OneToOne(cascade = CascadeType.ALL)
-    private Seat assento;
+    private Seat seat;
 
     @ManyToMany
-    private List<Project> projetos = new ArrayList<>();
+    private List<Project> projects = new ArrayList<>();
 
-    public Employee(String nome){
-        this.nome = nome;
+    public Employee(String name){
+        this.name = name;
     }
 }

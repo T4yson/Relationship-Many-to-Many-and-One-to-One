@@ -26,9 +26,9 @@ public class Project {
     @ManyToMany(mappedBy = "projects")
     private List<Employee> employees = new ArrayList<>();
 
-    private String nome;
+    private String name;
 
-    public Project(String nome) {
-        this.nome = nome;
+    public Project(String name) {
+        this.name = name;
     }
 }

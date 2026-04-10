@@ -21,7 +21,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Funcionario {
+public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -29,12 +29,12 @@ public class Funcionario {
     private String nome;
 
     @OneToOne(cascade = CascadeType.ALL)
-    private Assento assento;
+    private Seat assento;
 
     @ManyToMany
-    private List<Projeto> projetos = new ArrayList<>();
+    private List<Project> projetos = new ArrayList<>();
 
-    public Funcionario(String nome){
+    public Employee(String nome){
         this.nome = nome;
     }
 }

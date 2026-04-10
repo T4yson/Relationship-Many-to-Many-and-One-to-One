@@ -15,7 +15,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-public class Assento {
+public class Seat {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -23,9 +23,9 @@ public class Assento {
     private String codigo;
 
     @OneToOne(mappedBy = "assento")
-    private Funcionario funcionario;
+    private Employee funcionario;
 
-    public Assento(String codigo) {
+    public Seat(String codigo) {
         this.codigo = codigo;
     }
 }

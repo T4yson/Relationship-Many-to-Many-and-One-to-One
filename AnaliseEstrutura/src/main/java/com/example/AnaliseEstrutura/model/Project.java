@@ -18,17 +18,17 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Projeto {
+public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToMany(mappedBy = "projetos")
-    private List<Funcionario> funcionarios = new ArrayList<>();
+    @ManyToMany(mappedBy = "projects")
+    private List<Employee> employees = new ArrayList<>();
 
     private String nome;
 
-    public Projeto(String nome) {
+    public Project(String nome) {
         this.nome = nome;
     }
 }
